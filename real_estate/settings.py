@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-1f$%o#686%$z8edr4co$bgp7+i#aa=)kst_9_2hdpj!p8v5chm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://komal-real-estate.herokuapp.com/','localhost', '121.0.0.1']
+ALLOWED_HOSTS = ['komal-real-estate.herokuapp.com','.herokuapp.com']
 
 
 # Application definition
@@ -79,14 +79,21 @@ WSGI_APPLICATION = 'real_estate.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'btre_db',
+#         'USER': 'postgres',
+#         'PASSWORD': 'admin',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'btre_db',
-        'USER': 'postgres',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
