@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1f$%o#686%$z8edr4co$bgp7+i#aa=)kst_9_2hdpj!p8v5chm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['komal-real-estate.herokuapp.com','.herokuapp.com']
 
@@ -138,7 +138,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[
-    os.path.join(BASE_DIR, 'real_estate/static')
+    os.path.join(BASE_DIR, 'static')
 ]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
